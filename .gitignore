@@ -134,3 +134,11 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+
+# Misc filetypes 
+*.log
+*.aux
+*.lot
+*.toc
+*.gz
+*.pdf
