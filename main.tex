@@ -29,6 +29,9 @@
 \usepackage{tabto}
 \usepackage{appendix}
 
+% For subequations support
+\usepackage{amsmath}
+
 \newcommand{\bigtab}{} 
 
 % Required for probability representation
@@ -411,6 +414,20 @@ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = 8\pi G T_{\mu\nu}
 \begin{equation}
 i^{2} = j^{2} = k^{2} = ijk = -1
 \end{equation}
+
+\begin{equation}
+x_{n+1} = rx_{n}(1-x_{n})
+\end{equation}
+
+The next equation in the list was that of arithmetic  progression. an arithmetic progression (AP) or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. If the initial term of an arithmetic progression is $a_{1}$and the common difference of successive members is $d$, then the $n^{th}$ term of the sequence $a_{n}$ is given by:
+\begin{subequations}
+    \begin{align}   
+       a_{n} &= a_{1} + (n-1)d \label{apexp1}\\
+       \intertext{sum of all these terms is given by,}
+       S_{n} = \frac{n(a_{1}+a_{n})}{2} \label{apexp2}        
+    \end{align}
+\end{subequations}
+
 
 \begin{enumerate}
   \item The labels consists of sequential numbers.
