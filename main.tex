@@ -29,7 +29,14 @@
 \usepackage{tabto}
 \usepackage{appendix}
 
+% For subequations support
+\usepackage{amsmath}
+
 \newcommand{\bigtab}{} 
+
+% Required for probability representation
+\newcommand*{\prob}{\mathsf{P}}
+
 \renewcommand{\figurename}{Fig.}
 \newrefformat{fig}{Fig. \ref{#1}}
 
@@ -354,11 +361,71 @@ Chances are slim your report has a single equation so,
 \begin{equation}  \label{eq:2}
  f(x) = li(x)-\sum_{\rho}li(x^{\rho}) -  log(2) \frac{dt}{t(t^{2}-1)log(t)}
 \end{equation}
+Equation \ref{eq:2} is known as Riemann's formula. Another way of writing equation is \\
+% The equation
+\begin{equation}  \label{eq:3}
+ \pi = \frac{C}{d}
+\end{equation}
+% Description of the equation
+\hspace*{5cm} % the value inside {} dictates the horizontal space between margin and where
+\begin{tabular}{rl}
+where:\\
+    $C$ =& circumference of the circle \\
+    $d$ =& diameter of the circle  \\
+    \\
+    % The general syntax being 
+    % $<eqn parameter>$ <separator>& <description> \\(for new line)
+\end{tabular}
+% end of description
 
-Equation \ref{eq:2} is known as Riemann's formula.\lipsum[4]
+Next we have Euler-lagrange equation, 
+\begin{equation}  \label{eq:4}
+L_{x}(t,q(t),q'(t)) - \frac{\mathrm{d}}
+{\mathrm{d}t} L_{v}(t,q(t),q'(t))= 0
+\end{equation}
+
+Here \lstinline[language={[LaTeX]TeX},basicstyle=\ttfamily]{\mathrm} command is used keep the differential character upright mode rather than in math mode.
+
 \chapter{\MakeUppercase{Experimentation}}
 \lipsum[1]
-\break
+Let's see how some other equation look like 
+\begin{equation}  \label{eq:3}
+e^{i\pi} + 1 = 0
+\end{equation}
+Equation \ref{eq:3} is known as Euler's identity.The next one is a very familiar one, the Wave equation \ref{eq:4},
+\begin{equation}  \label{eq:4}
+\frac{\partial^2{u}}{\partial^2{t}} = c^2 \nabla^2 u
+\end{equation}
+
+Some equation have specific notations which which can get tricky like the tensor product, $\otimes$. the next Yang–Baxter equation is a similar one,
+\begin{equation}  \label{eq:5}
+(\check{R}\otimes1)(1\otimes\check{R})(\check{R}\otimes1) = (1\otimes\check{R})(\check{R}\otimes1)(1\otimes\check{R})
+\end{equation}
+
+\begin{equation}
+\prob(A/B) = \frac{\prob (B/A)  \prob (A)}{\prob (B)}
+\end{equation}
+
+\begin{equation}
+R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = 8\pi G T_{\mu\nu}
+\end{equation}
+
+\begin{equation}
+i^{2} = j^{2} = k^{2} = ijk = -1
+\end{equation}
+
+\begin{equation}
+x_{n+1} = rx_{n}(1-x_{n})
+\end{equation}
+
+The next equation in the list was that of arithmetic  progression. an arithmetic progression (AP) or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. If the initial term of an arithmetic progression is $a_{1}$and the common difference of successive members is $d$, then the $n^{th}$ term of the sequence $a_{n}$ is given by:
+\begin{subequations}
+    \begin{align}   
+       a_{n} &= a_{1} + (n-1)d \label{apexp1}\\
+       \intertext{sum of all these terms is given by,}
+       S_{n} = \frac{n(a_{1}+a_{n})}{2} \label{apexp2}        
+    \end{align}
+\end{subequations}
 
 
 \begin{enumerate}
