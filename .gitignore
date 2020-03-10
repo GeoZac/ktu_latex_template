@@ -142,3 +142,4 @@ sympy-plots-for-*.tex/
 *.toc
 *.gz
 *.pdf
+*.dbj
